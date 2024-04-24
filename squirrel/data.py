@@ -198,6 +198,8 @@ class Spectra(object):
             self._wavelengths_frame = f"z={redshift:.3f}"
 
         self._wavelengths = self._wavelengths / (1.0 + redshift)
+        self._spectra_modifications += ["deredshifted"]
+
 
     def reset(self):
         """Reset the data to the original state."""
